@@ -3,21 +3,10 @@
 <html>
 <head>
 <title>Esercizi di matematica per la seconda elementare</title>
-<link rel="shortcut icon" href="images/maths.png" type="image/x-icon">
+<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
-<style type="text/css">
-#container {
-	float: left;
- 	position:relative; 
-	margin: 0.5em auto;
-	background: rgb(255,255,200); /* light yellow */
-	border: 1px solid gray;
-/*	
-	width:	98%;
-	padding-bottom: 20%;
-*/
-}
 
+<style type="text/css">
 /* restyling existing tags */
 label {
 	float: left;
@@ -25,11 +14,29 @@ label {
 	text-align: right;
 	margin: 1px;
 	white-space:nowrap;
+	font-size: 200%;
+	/*
+	*/
 }
 
 input {
+	font-size: 200%;
 	float: left;
 	margin: 1px;
+	/*
+	*/
+}
+
+option {
+	/*
+	font-size: 200%;
+	*/
+}
+
+select {
+	font-size: 200%;
+	/*
+	*/
 }
 
 div {
@@ -37,9 +44,7 @@ div {
 	/*
 	*/
 }
-</style>
 
-<style type="text/css">
 /* classes */
 /*
 .labelradio {
@@ -49,54 +54,111 @@ div {
 */
 
 .optext {
-	color: white;
+	font-size: 200%;
+	color: red;
 	height: 1.5em;
 	text-align: right;
+	/*
+	color: white;
+	*/
 }
 
 .opinput {
 	min-width: 5em;
-	height: 1.8em;
+	height: 1.5em;
 	background-color: transparent;
+	/*
+	max-height: 1.8em;
+	font-size: 200%;
+	*/
 }
 
 .opresult {
+	font-size: 200%;
 	background-color: transparent;
 	color: lime;
 	padding-right: 2em;
 }
 
 /* IDs */
+#background-container {
+	background: rgb(255,255,200); /* light yellow */
+	border: 1px solid gray;
+	overflow: hidden; /* Hide scrollbars */
+       	height: 95vh;
+	/*
+        display: flex;
+ 	justify-content: center;  
+	align-items: center; 
+	*/
+}
+
+#data-container {
+        display: flex;
+ 	justify-content: center;  
+	align-items: center; 
+        flex-flow: column;
+	border:1px dashed blue;´
+	/*
+	width: 10px;
+       	height: 95%;
+	*/
+}
+
 #matContent {
+ 	position:relative; 
+        display: flex;
+ 	justify-content: center;  
+	align-items: center; 
+        flex-flow: column;
+	min-height:24em;
+ 	min-width:20em;
+	width: 90%;
+	color: red;
+	font-style: italic;
+	border:1px dashed blue;
+	padding: 1em;
+ 	overflow: visible;
+        display: flex;
+ 	justify-content: center;  
+	align-items: center; 
+        flex-flow: column;
+	color: red;
 	padding: 1em;
  	position:relative; 
 	min-height:24em;
 	min-width:20em;
 	overflow: visible;
-	color: white;
-	font-style: italic;
 	/*
-	border:1px dashed blue;
+	color: white;
 	*/
 }
 
 #RisposteEsatte {
 	color:green;
 	margin-right: 1em;
+	/*
+	font-size: 200%;
+	*/
 }
 
 #RisposteErrate {
 	color:red;
 	margin-right: 1em;
+	/*
+	font-size: 200%;
+	*/
 }
 
 #imageresults {
 	z-index:1;
 	align:left;
  	position:relative;  
-	top: 0em; 
-	height:3.5em;
+	border:1px dashed green;
+	height: 6em;
 	/*
+	height:30%;
+	top: 0em; 
 	border:1px dashed green;
 	*/
 }
@@ -113,12 +175,13 @@ div {
 #configurazione {
 	z-index:1;
  	position:absolute;
+	width: 90%;
+	margin: 1em;
+	border:1px dashed red;
+	/*
 	top: 0;
 	left:0; 
-	margin: 1em;
 	width:70%;
-	/*
-	border:1px dashed red;
 	*/
 }
 
@@ -126,10 +189,7 @@ div {
 	z-index:-1;
  	position:relative;
 	top: 0; 
-	left: 0;
-	/*
-	left: 30%;
-	*/
+	left: 0%;
 	margin: 1em;
  	white-space:nowrap;
 	/*
@@ -139,12 +199,15 @@ div {
 
 #buttonstart {
 	z-index:2;
+  	margin: auto;
+	/*
 	position:absolute;
 	bottom: 0;
 	left: 30%;
 	width: 35%;
 	min-width:8em;
 	background-color: #C0C0C0;
+	*/
 }
 
 #matHeader {
@@ -152,9 +215,9 @@ div {
 	position:relative;
 	padding: 0em;
 	margin: 0em;
+	border:1px dashed black;
 	/*
 	min-width:23em;
-	border:1px dashed black;
 	*/
 }
 
@@ -165,8 +228,8 @@ div {
 	padding: 0em;
 	margin: 0em;
 	white-space:nowrap;
-	/*
 	border:1px dashed blue;
+	/*
 	*/
 }
 
@@ -180,10 +243,11 @@ div {
 	width: 10em;
 	overflow: hidden;
 	text-overflow: ellipsis;
+	font-size: 300%;
+	border:1px dashed red;
 	/*
 	display:inline-block;
 	vertical-align:top;
-	border:1px dashed red;
 	*/
 }
 
@@ -192,10 +256,11 @@ div {
 	padding: 0em;
 	margin: 0em;
 	white-space:nowrap;
+	font-size: 200%;
+	border:1px dashed green;
 	/*
 	display:inline-block;
 	vertical-align:bottom;
-	border:1px dashed green;
 	*/
 }
 </style>
@@ -203,7 +268,8 @@ div {
 </head>
 
 <body>
-	<div id="container">
+	<div id="background-container">
+	<div id="data-container">
 		<div id="matHeader">
 			<img id="imageresults" src="images/pinocchio.png" alt="alunno della scuola elementare Lambertenghi 2A">
 			<div id="headText">
@@ -233,8 +299,9 @@ div {
 			<table id="exercises">
 				<tr><td></td></tr>
 			</table>
-			<input id="buttonstart" type="button" name="start" value="Partenza" onclick="ButtonAction()">
 		</div>
+		<input id="buttonstart" type="button" name="start" value="Partenza" onclick="ButtonAction()">
+	</div>
 	</div>
 
 <script type="text/javascript">
@@ -502,6 +569,7 @@ div {
 			answer = row.cells[icol * ncols + 1].firstChild.value;
 
 			row.cells[icol * ncols + 1].innerHTML = answer;
+			row.cells[icol * ncols + 1].style.fontSize = "200%";
 			if (parseInt(answer) == result[i]) {
 				answOK += 1;
 				row.cells[icol * ncols + 1].style.color = "lime";
